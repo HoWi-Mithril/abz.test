@@ -1,0 +1,53 @@
+@import "src/styles/_variables";
+
+.banner {
+    align-items: center;
+    background-image: url("../../assets/banner_small.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    color: $secondary-text-color;
+    flex-direction: column;
+    min-height: 500px;
+    padding: 40px 16px 71px;
+    position: relative;
+    text-align: center;
+
+    &::after {
+        background-color: rgba(0,0,0,.5);
+        content: '';
+        inset: 0;
+        position: absolute;
+    }
+
+    &-content {
+        z-index: 2;
+    }
+
+    &-description {
+        margin-top: 21px;
+    }
+
+    &-button{
+        margin: 32px auto 0;
+    }
+}
+
+@media (min-width: $layout-breakpoint-s) {
+    .banner {
+        padding-top: 89px;
+
+        &-content {
+            max-width: 380px;
+        }
+    }
+}
+
+@media (min-width: $layout-breakpoint-m) {
+    .banner {
+        background-image: url("../../assets/banner_xl.webp");
+        min-height: 650px;
+        padding-top: 164px;
+    }
+}

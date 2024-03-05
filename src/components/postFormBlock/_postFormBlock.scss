@@ -1,0 +1,30 @@
+@import "src/styles/_variables";
+
+.section-post {
+
+    text-align: left;
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        .user-data-wrapper {
+            &._error {
+                .upload-button,
+                .upload-title {
+                    border-width: 1px;
+                    border-color: $error-color;
+                    outline: 1px solid  $error-color;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: $layout-breakpoint-s) {
+    .form {
+        min-width: 380px;
+        margin: 0 auto;
+    }
+}

@@ -1,0 +1,27 @@
+@import "src/styles/_variables";
+
+.user-card {
+    background-color: $bg-secondary-color;
+    border-radius: $card-border-radius;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 20px;
+
+    .photo {
+        border-radius: 50%;
+        height: 70px;
+        margin: 0 auto;
+        width: 70px;
+    }
+
+    p {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .name {
+        margin: 20px 0;
+    }
+}

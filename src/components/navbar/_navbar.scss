@@ -1,0 +1,37 @@
+@import "src/styles/_variables";
+
+.header-wrapper {
+    background-color: $bg-secondary-color;
+}
+
+.header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 13px 16px;
+}
+
+.logo {
+    height: 26px;
+    width: 104px;
+}
+
+@media (min-width: $layout-breakpoint-s) {
+    .header {
+        padding: 13px 32px;
+    }
+}
+
+@media (min-width: $layout-breakpoint-m) {
+    .header {
+        padding: 13px 60px;
+    }
+}
+
+@media (min-width: $layout-breakpoint-l) {
+    .header {
+        margin: 0 auto;
+        max-width: 1170px;
+        padding: 13px 0;
+    }
+}

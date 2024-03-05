@@ -1,0 +1,43 @@
+@import "src/styles/_variables";
+
+.file-upload {
+    display: flex;
+    margin-top: 47px;
+    position: relative;
+
+    .upload-button {
+        border: 1px solid $primary-text-color;
+        border-radius: $input-border-radius 0 0 $input-border-radius;
+        padding: 13px 14px;
+        width: 83px;
+    }
+
+    .upload-title {
+        align-items: center;
+        border: 1px solid $border-main-color;
+        border-left: none;
+        border-radius: 0 $input-border-radius $input-border-radius 0;
+        color: $placeholder-text-color;
+        display: flex;
+        flex-grow: 1;
+        padding-left: 16px;
+
+        &.filled {
+            color: $primary-text-color;
+        }
+    }
+
+    input[type=file] {
+        bottom: 0;
+        cursor: pointer;
+        display: block;
+        height: 100%;
+        left: 0;
+        opacity: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+        z-index: 2;
+    }
+}

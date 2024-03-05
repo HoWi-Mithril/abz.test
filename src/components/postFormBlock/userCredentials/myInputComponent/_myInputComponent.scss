@@ -1,0 +1,67 @@
+@import "../../../../styles/variables";
+
+.user-data-wrapper {
+    position: relative;
+
+    .input-wrapper {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        input {
+            background-color: transparent;
+            border: 1px solid $border-main-color;
+            border-radius: $input-border-radius;
+            color: $primary-text-color;
+            font-size: inherit;
+            line-height: inherit;
+            padding: 13px 16px;
+        }
+
+        label {
+            color: $placeholder-text-color;
+            left: 16px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: all 0.25s;
+        }
+
+        input:focus + label,
+        &._active label {
+            background-color: $bg-main-color;
+            font-size: 12px;
+            line-height: 14px;
+            padding-left: 4px;
+            padding-right: 4px;
+            top: 0;
+        }
+    }
+
+    .message {
+        color: $placeholder-text-color;
+        font-size: 12px;
+        line-height: 14px;
+        margin: 4px 16px 0;
+        position: absolute;
+        top: 100%;
+    }
+
+    &._error {
+        input {
+            border-color: $error-color;
+            outline: 1px solid  $error-color;
+        }
+
+        .input-wrapper {
+            input:focus + label,
+            &._active label {
+                color: $error-color;
+            }
+        }
+
+        .message {
+            color: $error-color;
+        }
+    }
+}

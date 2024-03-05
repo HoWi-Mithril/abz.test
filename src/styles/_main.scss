@@ -1,0 +1,87 @@
+@import "_normalize";
+@import "_variables";
+@import "_font";
+
+html {
+    background-color: $bg-main-color;
+    color: $primary-text-color;
+    line-height: 26px;
+    padding-bottom: 100px;
+    scroll-behavior: smooth;
+}
+
+a {
+    color: $primary-text-color;
+}
+
+.flex-wrapper {
+    display: flex;
+}
+
+.nav-link,
+.primary-button {
+    align-items: center;
+    background-color: $primary-color;
+    border-radius: $button-border-radius;
+    color: $primary-text-color;
+    cursor: pointer;
+    display: flex;
+    font-size: 16px;
+    justify-content: center;
+    height: 34px;
+    line-height: 26px;
+    transition: 0.25s;
+    width: 100px;
+
+    &:hover {
+        background-color: $primary-color-hover;
+    }
+
+    &[disabled] {
+        background-color: $bg-disabled-color;
+        color: $bg-secondary-color;
+        cursor: not-allowed;
+    }
+}
+
+.title {
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 40px;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    margin-top: 140px;
+    padding: 0 16px;
+    text-align: center;
+
+    .title {
+        margin-bottom: 50px;
+        text-align: center;
+    }
+}
+
+@media (min-width: $layout-breakpoint-s) {
+    .section {
+        padding: 0 32px;
+    }
+}
+
+@media (min-width: $layout-breakpoint-m) {
+    .section {
+        padding: 0 60px;
+    }
+}
+
+@media (min-width: $layout-breakpoint-l) {
+    .main {
+        margin: 0 auto;
+        max-width: 1170px;
+    }
+
+    .section {
+        padding: 0;
+    }
+}
